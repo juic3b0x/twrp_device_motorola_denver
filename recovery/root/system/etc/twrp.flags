@@ -1,8 +1,6 @@
-#
-# Copyright (C) 2020 The Android Open Source Project
-# Copyright (C) 2020 The TWRP Open Source Project
-# Copyright (C) 2020 SebaUbuntu's TWRP device tree generator
-#
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 # mount point  fstype  device                             device2                flags
 
@@ -23,5 +21,5 @@
 /persist_image emmc    /dev/block/bootdevice/by-name/persist                     flags=display="Persist";flashimg=1
 
 # Removable storage
-/usbstorage    auto    /dev/block/sdg1                    /dev/block/sdg         flags=fsflags=utf8;display="USB-OTG";storage;wipeingui;removable
-/external_sd   auto    /dev/block/mmcblk1p1               /dev/block/mmcblk1     flags=display=""MicroSD-Card"";storage;wipeingui;removable
+/usbstorage    vfat    /dev/block/sdg1                    /dev/block/sdg         flags=fsflags=utf8;display="USB Storage";storage;wipeingui;removable
+/external_sd   vfat    /dev/block/mmcblk1p1               /dev/block/mmcblk1     flags=display="MicroSD";storage;wipeingui;removable

@@ -9,6 +9,4 @@ PRODUCT_MAKEFILES := \
      $(LOCAL_DIR)/twrp_denver.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_denver-eng \
-    twrp_denver-userdebug \
-    twrp_denver-user
+    twrp_denver-eng

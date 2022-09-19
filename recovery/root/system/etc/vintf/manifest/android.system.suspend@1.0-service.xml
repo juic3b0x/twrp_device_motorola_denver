@@ -1,10 +1,10 @@
-<manifest version="1.0" type="device">
-    <hal format="hidl">
-        <name>motorola.hardware.input</name>
+<manifest version="1.0" type="framework">
+    <hal>
+        <name>android.system.suspend</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IMotInput</name>
+            <name>ISystemSuspend</name>
             <instance>default</instance>
         </interface>
     </hal>
